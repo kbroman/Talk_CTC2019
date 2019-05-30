@@ -9,7 +9,7 @@ The compiled slides:
 ---
 
 To the extent possible under law,
-[Karl Broman](http://github.com/kbroman) has waived all copyright and
+[Karl Broman](https://github.com/kbroman) has waived all copyright and
 related or neighboring rights to
 &ldquo;[Mix-ups and mixtures in microbiome data in DO mice](https://github.com/kbroman/Talk_CTC2019)&rdquo;.
 This work is published from the United States.
