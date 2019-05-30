@@ -26,11 +26,28 @@ ph <- ph[["4"]][1,wh,]
 rec_left <- pmap_grid[wh[max(which(!is.na(ph[,1]) & ph[,1]==8))]]
 rec_right <- pmap_grid[wh[min(which(!is.na(ph[,1]) & ph[,1]==2))]]
 
-
 maxy_founder <- 3
 y_do <- 4.5
 y_doinf <- 6
 pt_cex <- 1.8
+
+file <- "further_snps.RData"
+if(file.exists(file)) {
+    load(file)
+} else {
+    qf <- create_variant_query_func("~/Data/CCdb/cc_variants.sqlite")
+    tab <- NULL
+    for(i in seq_along(pmap4_sub)[-1]) {
+        tmp <- qf("4", pmap4_sub[i-1], pmap4_sub[i])
+        map <- reduce_markers(setNames(tmp$pos, tmp$snp_id), 0.02)
+        tmp <- tmp[tmp$snp_id %in% names(map),]
+        if(nrow(tmp) <= 2) next
+        tmp <- tmp[-c(1, nrow(tmp)), ,drop=FALSE]
+        tab <- rbind(tab,tmp)
+
+    }
+}
+
 
 geno_reconstruct <- function(incl_reconstruction=FALSE)
 {
@@ -90,3 +107,10 @@ dev.off()
 pdf("../Figs/geno_reconstruct_B.pdf", height=5.5, width=10, pointsize=14)
 geno_reconstruct(TRUE)
 dev.off()
+
+# add two additional versions:
+#
+# - little dots at additional snps
+#   ... pull from the larger intervals, and subset using reduce_markers
+#
+# - inferred genotype in DO-336
