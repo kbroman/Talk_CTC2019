@@ -1,10 +1,10 @@
 STEM = ctc2019
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 
-$(STEM).pdf: $(STEM).tex header.tex
+$(STEM).pdf: $(STEM).tex header.tex Figs/hs.pdf Figs/overview.pdf
 	xelatex $<
 
-Figs/%.pdf: R/%_fig.R
+Figs/%.pdf: R/%.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
 
 notes: $(STEM)_withnotes.pdf
