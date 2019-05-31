@@ -6,3 +6,5 @@
 *.snm
 *.toc
 ctc2019_withnotes.tex
+Data/dist_matrix.rds
+R/get_data.R
