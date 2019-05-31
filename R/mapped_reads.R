@@ -57,11 +57,18 @@ mapped_reads <- function(version=1) {
         wh <- snp_overlap[[i]]
         n <- length(wh)
         if(n==0) next
+
+        # alleles at reads
         gg <- g[wh]
         if(any(gg==2)) gg[gg==2] <- sample(c(1,3), sum(gg==2), replace=TRUE)
+        gg[gg==3] <- 2
+
+        # add some noise (0.4% error)
+        err <- (runif(length(gg), 0, 1) < 0.004)
+        if(any(err)) gg[err] <- 3 - gg[err]
 
         points(tab$pos[wh], rep(read_y[i], n), cex=pt_cex_small,
-               pch=21, col="black", bg=c("white", "gray", "black")[gg])
+               pch=21, col="black", bg=c("white", "black")[gg])
     }
 }
 
