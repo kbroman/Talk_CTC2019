@@ -8,7 +8,8 @@ $(STEM).pdf: $(STEM).tex \
 			 Figs/do_genome.pdf \
 			 Figs/geno_reconstruct.pdf \
 			 Figs/mapped_reads.pdf \
-			 Figs/dist_matrix.pdf
+			 Figs/dist_matrix.pdf \
+			 Figs/min_v_self.pdf
 	xelatex $<
 
 Figs/%.pdf: R/%.R
