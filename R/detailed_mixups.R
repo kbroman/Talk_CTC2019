@@ -5,7 +5,7 @@ d <- readRDS("../Data/dist_matrix.rds")
 samples <- paste0("DO-", c(53, 54, 360, 370, 361, 362))
 bad <- paste0("DO-", c(340, 397, 212, 308))
 
-pdf("../Figs/detailed_mixups.pdf", height=5.5, width=10, pointsize=14)
+pdf("../Figs/detailed_mixups.pdf", height=5.5, width=10, pointsize=18)
 
 par(mfcol=c(2, 3), mar=c(2.6, 3.8, 2.1, 0.6))
 for(samp in samples) {
@@ -19,11 +19,11 @@ for(samp in samples) {
     points(match(samp, colnames(d)), d[samp, samp], pch=21, bg="violetred")
 
     wh <- which.min(d[samp,])
-    text(wh+5, d[samp,wh]+0.013, colnames(d)[wh], adj=0)
+    text(wh+8, d[samp,wh]+0.018, colnames(d)[wh], adj=0, cex=1.2)
 
     if(samp=="DO-362") {
         wh <- match(samp, colnames(d))
-        text(wh+5, d[samp,samp]-0.013, samp, adj=c(0, 0.5))
+        text(wh-8, d[samp,samp]-0.018, samp, adj=1, cex=1.2)
     }
 
 }
