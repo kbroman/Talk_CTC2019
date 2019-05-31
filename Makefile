@@ -7,8 +7,8 @@ FIGS = Figs/hs.pdf \
 	   Figs/geno_reconstruct.pdf \
 	   Figs/mapped_reads.pdf \
 	   Figs/dist_matrix.pdf \
-	   Figs/min_v_self.pdf
-
+	   Figs/min_v_self.pdf \
+	   Figs/detailed_mixups.pdf
 
 $(STEM).pdf: $(STEM).tex header.tex $(FIGS)
 	xelatex $<

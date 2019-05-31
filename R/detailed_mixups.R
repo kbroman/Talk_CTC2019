@@ -1,0 +1,30 @@
+# detailed view of 6 samples
+
+d <- readRDS("../Data/dist_matrix.rds")
+
+samples <- paste0("DO-", c(53, 54, 360, 370, 361, 362))
+bad <- paste0("DO-", c(340, 397, 212, 308))
+
+pdf("../Figs/detailed_mixups.pdf", height=5.5, width=10, pointsize=14)
+
+par(mfcol=c(2, 3), mar=c(2.6, 3.8, 2.1, 0.6))
+for(samp in samples) {
+    grayplot(d[samp,], xlab="genomic DNA sample",
+             main=paste("microbiome sample", samp),
+             ylab="proportion mismatches",
+             ylim=c(0, 0.29), yaxs="i",
+             mgp.x=c(1.3, 0.3, 0),
+             mgp.y=c(2.5, 0.3, 0))
+    points(match(bad, colnames(d)), d[samp, bad], pch=21, bg="pink")
+    points(match(samp, colnames(d)), d[samp, samp], pch=21, bg="violetred")
+
+    wh <- which.min(d[samp,])
+    text(wh+5, d[samp,wh]+0.013, colnames(d)[wh], adj=0)
+
+    if(samp=="DO-362") {
+        wh <- match(samp, colnames(d))
+        text(wh+5, d[samp,samp]-0.013, samp, adj=c(0, 0.5))
+    }
+
+}
+dev.off()
