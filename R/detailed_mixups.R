@@ -1,5 +1,7 @@
 # detailed view of 6 samples
 
+library(broman)
+
 d <- readRDS("../Data/dist_matrix.rds")
 
 samples <- paste0("DO-", c(53, 54, 360, 370, 361, 362))
