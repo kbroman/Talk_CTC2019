@@ -7,7 +7,8 @@ $(STEM).pdf: $(STEM).tex \
 			 Figs/overview.pdf \
 			 Figs/do_genome.pdf \
 			 Figs/geno_reconstruct.pdf \
-			 Figs/mapped_reads.pdf
+			 Figs/mapped_reads.pdf \
+			 Figs/dist_matrix.pdf
 	xelatex $<
 
 Figs/%.pdf: R/%.R
