@@ -112,18 +112,112 @@
 
 \begin{frame}[c]{Genomic DNA vs microbiome reads}
 
-\bbi
- \item table with AA,AB,BB as rows and A,B as columns,
-    labeled ``genomic SNP genotypes'' and ``alleles on microbiome reads''
- \item add in data for a correct sample pair
- \item then look at a bad pair
- \item then look at the correct microbiome sample
-\ei
+
+\onslide<2>{\bigskip {\hilit genomic DO-381 vs microbiome DO-381}}
+
+
+\only<1>{
+  \begin{center}
+      \renewcommand{\arraystretch}{2}
+    \begin{tabular}{c|r|r|}
+    \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{microbiome DNA}} \\
+    \multicolumn{1}{c}{\textbf{genomic DNA}} & \multicolumn{1}{c}{\textbf{A}}
+           & \multicolumn{1}{c}{\textbf{B}} \\ \cline{2-3}
+    \textbf{AA} &        &             \\ \cline{2-3}
+    \textbf{AB} &        &             \\ \cline{2-3}
+    \textbf{BB} &        &             \\ \cline{2-3}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\hspace*{20mm}} &
+            \multicolumn{1}{c}{\hspace*{20mm}}
+  \end{tabular}
+
+{\color{white} percent mismatch = NA}
+  \end{center}
+}
+
+
+\only<2>{
+  \begin{center}
+      \renewcommand{\arraystretch}{2}
+    \begin{tabular}{c|r|r|}
+    \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{microbiome DNA}} \\
+    \multicolumn{1}{c}{\textbf{genomic DNA}} & \multicolumn{1}{c}{\textbf{A}}
+           & \multicolumn{1}{c}{\textbf{B}} \\ \cline{2-3}
+    \textbf{AA} & 2,762,341 &   7,303 \\ \cline{2-3}
+    \textbf{AB} &   606,312 & 578,017 \\ \cline{2-3}
+    \textbf{BB} &     2,128 & 375,559 \\ \cline{2-3}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\hspace*{20mm}} &
+            \multicolumn{1}{c}{\hspace*{20mm}}
+  \end{tabular}
+
+percent mismatch = 0.3\%
+  \end{center}
+}
+
 
 \note{
 }
 
 \end{frame}
+
+
+\begin{frame}[c]{Genomic DNA vs microbiome reads}
+
+
+\bigskip {\hilit genomic DO-360 vs microbiome DO-360}
+
+
+  \begin{center}
+      \renewcommand{\arraystretch}{2}
+    \begin{tabular}{c|r|r|}
+    \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{microbiome DNA}} \\
+    \multicolumn{1}{c}{\textbf{genomic DNA}} & \multicolumn{1}{c}{\textbf{A}}
+           & \multicolumn{1}{c}{\textbf{B}} \\ \cline{2-3}
+    \textbf{AA} & 8,863,572 & 1,520,169 \\ \cline{2-3}
+    \textbf{AB} & 2,870,063 & 1,075,126 \\ \cline{2-3}
+    \textbf{BB} &   671,722 &  536,010  \\ \cline{2-3}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\hspace*{20mm}} &
+            \multicolumn{1}{c}{\hspace*{20mm}}
+  \end{tabular}
+
+percent mismatch = 19\%
+  \end{center}
+
+
+\note{
+}
+
+\end{frame}
+
+
+\begin{frame}[c]{Genomic DNA vs microbiome reads}
+
+
+\bigskip {\hilit genomic DO-360 vs microbiome DO-370}
+
+  \begin{center}
+      \renewcommand{\arraystretch}{2}
+    \begin{tabular}{c|r|r|}
+    \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{microbiome DNA}} \\
+    \multicolumn{1}{c}{\textbf{genomic DNA}} & \multicolumn{1}{c}{\textbf{A}}
+           & \multicolumn{1}{c}{\textbf{B}} \\ \cline{2-3}
+    \textbf{AA} & 3,409,773 &   11,311 \\ \cline{2-3}
+    \textbf{AB} &   659,986 &  615,628 \\ \cline{2-3}
+    \textbf{BB} &     3,375 &  383,222 \\ \cline{2-3}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\hspace*{20mm}} &
+            \multicolumn{1}{c}{\hspace*{20mm}}
+  \end{tabular}
+
+percent mismatch = 0.4\%
+  \end{center}
+
+
+\note{
+}
+
+\end{frame}
+
+
+
 
 
 
