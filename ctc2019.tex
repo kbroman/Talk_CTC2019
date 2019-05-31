@@ -251,13 +251,169 @@
 
 
 
-\begin{frame}[c]{Genotype pairs vs microbiome reads}
+\begin{frame}{Genotype pair vs microbiome reads}
 
-\bbi
- \item table with pairs of genotypes vs microbiome reads
- \item then show table for a clean sample
- \item then show probability model
-\ei
+
+\bigskip {\hilit genomic DO-362 and DO-361 vs microbiome DO-362}
+
+\bigskip \bigskip
+
+{\hspace*{-9mm}
+  \footnotesize
+  \renewcommand{\arraystretch}{2}
+  \setlength{\tabcolsep}{1.5mm}
+\only<1>{ \begin{tabular}{c|r|r|cc|r|r|cc|r|r|}
+        \multicolumn{1}{c}{\textbf{DO-362:}} & \multicolumn{2}{c}{\textbf{AA}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{AB}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{BB}} \\
+
+        \multicolumn{1}{c}{\textbf{DO-361}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-361}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-361}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+      \textbf{AA} & 1,306,406 &   3,688 &&
+      \textbf{AA} &   339,397 & 162,432 &&
+      \textbf{AA} &    33,661 &  63,318 \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{AB} & 395,562 &  75,326 &&
+      \textbf{AB} & 135,825 & 128,895 &&
+      \textbf{AB} &  14,836 &  71,817 \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{BB} & 41,593 & 19,813 &&
+      \textbf{BB} & 25,798 & 49,487 &&
+      \textbf{BB} &    529 & 93,162 \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{}
+  \end{tabular} }
+\only<2|handout 0>{  \begin{tabular}{c|r|r|cc|r|r|cc|r|r|}
+        \multicolumn{1}{c}{\textbf{DO-362:}} & \multicolumn{2}{c}{\textbf{AA}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{AB}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{BB}} \\
+
+        \multicolumn{1}{c}{\textbf{DO-361}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-361}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-361}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+      \textbf{AA} & 99.7\% &  0.3\% &&
+      \textbf{AA} & 67.6\% & 32.4\% &&
+      \textbf{AA} & 34.7\% & 65.3\% \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{AB} & 84.0\%   & 16.0\%  &&
+      \textbf{AB} & 51.3\%   & 48.7\%  &&
+      \textbf{AB} & 17.1\%   & 82.9\%  \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{BB} & 67.7\% & 32.3\% &&
+      \textbf{BB} & 34.3\% & 65.7\% &&
+      \textbf{BB} &  0.6\% & 99.4\% \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\color{white} 1,306,406}
+                & \multicolumn{1}{c}{\color{white} 75,326} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\color{white} 339,397}
+                & \multicolumn{1}{c}{\color{white} 162,432} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\color{white} 33,661}
+                & \multicolumn{1}{c}{\color{white} 93,162}
+  \end{tabular} }
+}
+
+
+\note{
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Genotype pair vs microbiome reads}
+
+
+\bigskip {\hilit genomic DO-361 and DO-362 vs microbiome DO-361}
+
+\bigskip \bigskip
+
+{\hspace*{-9mm}
+  \footnotesize
+  \renewcommand{\arraystretch}{2}
+  \setlength{\tabcolsep}{1.5mm}
+\only<1>{  \begin{tabular}{c|r|r|cc|r|r|cc|r|r|}
+        \multicolumn{1}{c}{\textbf{DO-361:}} & \multicolumn{2}{c}{\textbf{AA}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{AB}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{BB}} \\
+
+        \multicolumn{1}{c}{\textbf{DO-362}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-362}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-362}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+      \textbf{AA} & 2,162,059 &   6,503 &&
+      \textbf{AA} &   428,229 & 405,190 &&
+      \textbf{AA} &     1,623 & 155,276 \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{AB} & 788,011 &   2,806 &&
+      \textbf{AB} & 223,680 & 215,833 &&
+      \textbf{AB} &   1,126 & 140,739 \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{BB} & 104,511 &     511 &&
+      \textbf{BB} &  64,082 &  62,658 &&
+      \textbf{BB} &   1,103 & 151,334 \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{}
+  \end{tabular} }
+\only<2|handout 0>{  \begin{tabular}{c|r|r|cc|r|r|cc|r|r|}
+        \multicolumn{1}{c}{\textbf{DO-361:}} & \multicolumn{2}{c}{\textbf{AA}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{AB}} &&
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{\textbf{BB}} \\
+
+        \multicolumn{1}{c}{\textbf{DO-362}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-362}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} &&
+        \multicolumn{1}{c}{\textbf{DO-362}}&
+                 \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+      \textbf{AA} & 99.7\% &  0.3\% &&
+      \textbf{AA} & 51.4\% & 48.6\%  &&
+      \textbf{AA} &  1.0\% & 99.0\% \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{AB} & 99.6\% &  0.4\% &&
+      \textbf{AB} & 50.9\% & 49.1\%  &&
+      \textbf{AB} &  0.8\% & 99.2\%  \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+      \textbf{BB} & 99.5\% &  0.5\% &&
+      \textbf{BB} & 50.6\% & 49.4\% &&
+      \textbf{BB} &  0.7\% & 99.3\% \\
+        \cline{2-3}\cline{6-7}\cline{10-11}
+
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\color{white} 2,162,059}
+                & \multicolumn{1}{c}{\color{white} 6,503} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\color{white} 428,229}
+                & \multicolumn{1}{c}{\color{white} 405,190} &&
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\color{white} 1,623}
+                & \multicolumn{1}{c}{\color{white} 155,276}
+  \end{tabular} }
+}
 
 \note{
 }
