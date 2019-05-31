@@ -1,7 +1,13 @@
 STEM = ctc2019
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 
-$(STEM).pdf: $(STEM).tex header.tex Figs/hs.pdf Figs/overview.pdf Figs/do_genome.pdf Figs/geno_reconstruct.pdf
+$(STEM).pdf: $(STEM).tex \
+			 header.tex \
+			 Figs/hs.pdf \
+			 Figs/overview.pdf \
+			 Figs/do_genome.pdf \
+			 Figs/geno_reconstruct.pdf \
+			 Figs/mapped_reads.pdf
 	xelatex $<
 
 Figs/%.pdf: R/%.R
