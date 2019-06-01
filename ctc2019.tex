@@ -452,7 +452,15 @@
 \begin{frame}[c]{Summary}
 
 \bbi
- \item everyone likes a good summary
+ \item Microbiome shotgun reads include reads from the host
+ \item With such data, sample mix-ups can be identified
+ \item Simple method:
+   \bi
+ \item Impute genotype at all SNPs
+ \item Count alleles in reads overlapping SNPs
+ \item Focus on homozygous SNPs and calculate percent discordant reads
+   \ei
+ \item We also saw strong evidence for many samples being mixtures
 \ei
 
 \note{
@@ -473,6 +481,13 @@
 \ei
 
 \note{
+  Lindsay had the idea to look for these mix-ups. (She was a postdoc
+  with Federico Rey in Microbiology at UW-Madison.) Alexandra did most
+  of the work. (She was a summer student with me and now is a graduate
+  student in the Biomedical Data Science PhD program at UW-Madison.
+
+  This is part of a larger project looking at the genetics of
+  diabetes, obesity, and related traits.
 }
 
 \end{frame}
