@@ -151,6 +151,18 @@ direct DO genotype data.
 
 
 \note{
+The second part of the process is to map sequence reads to the mouse
+genome. We then look at the SNPs in a region, identify which reads
+overlap a SNP, and the count the observed alleles at the different reads.
+
+If a DO mouse really corresponds to that microbiome sample, all reads
+should be A whereever the mouse has genotype AA, and B where the mouse
+is BB. At SNPs where the mouse is AB, half the reads should be A and
+half should be B.
+
+There will be some errors in the sequence reads, such as the black dot
+in the interval 45.002--45.004, corresponding to an allele B in a read
+at a SNP where the mouse is AA.
 }
 
 \end{frame}
