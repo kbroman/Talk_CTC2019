@@ -116,7 +116,27 @@ where genotype is uncertain.
 \only<4>{\figw{Figs/geno_reconstruct_D.pdf}{1.0}}
 
 \note{
+Our first step is to reconstruct the founder genotypes along the
+genome of each DO mouse, using SNP data on DO mice and the eight
+founder strains. We use a hidden Markov model for this purpose, which
+allows for the presence of genotyping errors.
+
+The white, gray, and black circles indicate SNP genotypes AA, AB, and
+BB, with A being the major allele and B being the minor allele (based
+on frequency in the eight founder strains.)
+
+The eight founder strains have been sequenced, and so we know their
+genotype at about 40 million polymorphisms in the genome. We can use
+those genotypes plus the DO genotype reconstructions to infer the DO
+mouse genotypes at all SNPs.
+
+This is important because we want to compare sequence reads to the SNP
+genotypes, and while many sequence reads will overlap a SNP, few will
+overlap one of the SNPs on the GigaMUGA array, for which we have
+direct DO genotype data.
 }
+
+
 
 \end{frame}
 
