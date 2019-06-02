@@ -303,6 +303,14 @@ at a SNP where the mouse is AA.
 \figw{Figs/dist_matrix.pdf}{1.0}
 
 \note{
+  This shows the distances between microbiome samples (on y-axis) and
+  genomic DNA samples (on x-axis), with black indicating the samples
+  are similar, and white indicating they are different.
+
+  There were a total of 500 DO mice, in five batches of 100 mice each.
+  The microbiome study included the first, second, and fourth batches.
+  The black diagonal line indicates that most of the samples are
+  correct; but if you look closely you can see some problems.
 }
 
 \end{frame}
@@ -314,6 +322,22 @@ at a SNP where the mouse is AA.
 \figw{Figs/min_v_self.pdf}{1.0}
 
 \note{
+  Here, we plot the minimum distance for each microbiome sample (the
+  minimum value in each row in the distance matrix) vs.\ the self-self
+  distance.
+
+  Samples on the diagonal (in light blue) look to be
+  correctly labeled: they are similar to the corresponding genomic DNA
+  sample and no other sample is closer.
+
+  Samples in the lower-right corner (purple) are mix-ups. They are very
+  different from the correspondingly labeled sample, but there is
+  another sample that is quite close.
+
+  Samples in green turn out to be mixtures (more on this below).
+
+  Samples in pink (upper right) have bad genomic DNA samples. Samples
+  in light purple have low read counts.
 }
 
 \end{frame}
