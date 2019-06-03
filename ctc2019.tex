@@ -398,17 +398,17 @@ at a SNP where the mouse is AA.
                  \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} \\
         \cline{2-3}\cline{6-7}\cline{10-11}
       \textbf{AA} & 1,306,406 &   3,688 &&
-      \textbf{AA} &   339,397 & 162,432 &&
-      \textbf{AA} &    33,661 &  63,318 \\
+      \textbf{AA} &   395,562 &  75,326 &&
+      \textbf{AA} &    41,593 &  19,813 \\
         \cline{2-3}\cline{6-7}\cline{10-11}
 
-      \textbf{AB} & 395,562 &  75,326 &&
+      \textbf{AB} & 339,397 & 162,432 &&
       \textbf{AB} & 135,825 & 128,895 &&
-      \textbf{AB} &  14,836 &  71,817 \\
+      \textbf{AB} &  25,798 &  49,487 \\
         \cline{2-3}\cline{6-7}\cline{10-11}
 
-      \textbf{BB} & 41,593 & 19,813 &&
-      \textbf{BB} & 25,798 & 49,487 &&
+      \textbf{BB} & 33,661 & 63,318 &&
+      \textbf{BB} & 14,836 & 71,817 &&
       \textbf{BB} &    529 & 93,162 \\
         \cline{2-3}\cline{6-7}\cline{10-11}
 
@@ -429,17 +429,17 @@ at a SNP where the mouse is AA.
                  \multicolumn{1}{c}{\textbf{A}}&\multicolumn{1}{c}{\textbf{B}} \\
         \cline{2-3}\cline{6-7}\cline{10-11}
       \textbf{AA} & 99.7\% &  0.3\% &&
-      \textbf{AA} & 67.6\% & 32.4\% &&
-      \textbf{AA} & 34.7\% & 65.3\% \\
+      \textbf{AA} & 84.0\% & 16.0\% &&
+      \textbf{AA} & 67.7\% & 32.3\% \\
         \cline{2-3}\cline{6-7}\cline{10-11}
 
-      \textbf{AB} & 84.0\%   & 16.0\%  &&
+      \textbf{AB} & 67.6\%   & 32.4\%  &&
       \textbf{AB} & 51.3\%   & 48.7\%  &&
-      \textbf{AB} & 17.1\%   & 82.9\%  \\
+      \textbf{AB} & 34.3\%   & 65.7\%  \\
         \cline{2-3}\cline{6-7}\cline{10-11}
 
-      \textbf{BB} & 67.7\% & 32.3\% &&
-      \textbf{BB} & 34.3\% & 65.7\% &&
+      \textbf{BB} & 34.7\% & 65.3\% &&
+      \textbf{BB} & 17.1\% & 82.9\% &&
       \textbf{BB} &  0.6\% & 99.4\% \\
         \cline{2-3}\cline{6-7}\cline{10-11}
 
@@ -454,6 +454,21 @@ at a SNP where the mouse is AA.
 
 
 \note{
+    To assess whether the microbiome sample DO-362 is in fact a
+    mixture, we can divide SNPs into nine groups according to the
+    genotypes of DO-362 and DO-361, and then count the number of A and
+    B reads in each group.
+
+    It should be that the frequency of A vs. B reads in the microbiome
+    sample DO-362 should only depend on the genotype of DO-362 and not
+    on the genotype of DO-361. But as shown on this slide, there is a
+    very strong dependence on the genotype of DO-361.
+
+    For example, when DO-362 is AA, there should be a small proportion
+    of B reads, irrespective of what the genotype of DO-361 is. But
+    when DO-361 is BB, there are about 65\% B reads. It seems clear
+    that the DO-362 microbiome sample is contaminated with DNA from
+    DO-361, and in fact it could be about 65\% from DO-361.
 }
 
 \end{frame}
@@ -539,6 +554,9 @@ at a SNP where the mouse is AA.
 }
 
 \note{
+  Here's a similar table for the DO-361 microbiome sample. This is
+  what a clean microbiome sample should look like. But note that there is
+  still some small association with the genotype of the DO-362 sample.
 }
 
 \end{frame}
