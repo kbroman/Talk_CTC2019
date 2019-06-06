@@ -6,6 +6,9 @@ Community meeting](http://ratgenes.org/ctc2019) in San Diego on 10 June 2019.
 The compiled slides:
 [`ctc2019.pdf`](https://www.biostat.wisc.edu/~kbroman/presentations/ctc2019.pdf)
 
+Slides with notes on what I'll say:
+[`ctc2019_withnotes.pdf`](https://www.biostat.wisc.edu/~kbroman/presentations/ctc2019_withnotes.pdf)
+
 ---
 
 To the extent possible under law,
