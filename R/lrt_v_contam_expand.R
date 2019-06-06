@@ -1,4 +1,4 @@
-# figure 5: expand lower-left of figure 3, on LRT statistic vs mixture proportion
+# figure 5: expand lower-left of figure 3, on LRT statistic vs mixture percent
 
 library(lineup2)
 library(broman)
@@ -23,7 +23,7 @@ z <- t(sapply(mix, function(a) {
 z[,2] <- z[,2]/1e6
 
 
-pdf("../Figs/lrt_v_contam_expand.pdf", width=10, height=5.5, pointsize=10)
+pdf("../Figs/lrt_v_contam_expand.pdf", width=10, height=5.5, pointsize=14)
 par(mar=c(2.6,2.8,1.1,1.1))
 
 the_colors <- c("lightblue",
@@ -57,10 +57,10 @@ color[all_mix] <- the_colors[4]
 par(mar=c(2.6,3.0,1.1,0.9))
 sub <- mixsum[mixsum$lrt_p0 < 2.3e5,]
 color <- color[mixsum$lrt_p0 < 2.3e5]
-grayplot(sub$p, sub$lrt_p0/1e5,
-         xlab="Proportion contaminant", ylab=expression(paste("LRT statistic (/", 10^5, ")")),
-         yaxs="i", xaxs="i", xlim=c(0, 1), ylim=c(0, max(sub$lrt_p0)/1e5*1.05),
-         xat=seq(0, 1, by=0.1), mgp.x=c(1.4,0.3,0), mgp.y=c(1.6,0.3,0), bg=color)
+grayplot(sub$p*100, sub$lrt_p0/1e5,
+         xlab="Percent contaminant", ylab=expression(paste("LRT statistic (/", 10^5, ")")),
+         yaxs="i", xaxs="i", xlim=c(0, 100), ylim=c(0, max(sub$lrt_p0)/1e5*1.05),
+         xat=seq(0, 100, by=10), mgp.x=c(1.4,0.3,0), mgp.y=c(1.6,0.3,0), bg=color)
 
 
 

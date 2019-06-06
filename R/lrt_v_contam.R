@@ -1,4 +1,4 @@
-# figure 3: LRT statistic vs mixture proportion
+# figure 3: LRT statistic vs mixture percent
 
 library(lineup2)
 library(broman)
@@ -10,7 +10,7 @@ z <- t(sapply(mix, function(a) {
     w <- which(!is.na(a[,"lrt_p0"]) & a[,"lrt_p0"] == max(a[,"lrt_p0"], na.rm=TRUE))
     a[w, c("p", "lrt_p0")] }))
 z[,2] <- z[,2]/1e6
-
+z[,1] <- z[,1]*100 # percent contaminant
 
 pdf("../Figs/lrt_v_contam.pdf", width=10, height=5, pointsize=14)
 par(mar=c(2.6,2.8,1.1,1.1))
@@ -38,8 +38,8 @@ lowreads <- paste0("DO-", c(174, 385))
 color[lowreads] <- the_colors[2]
 
 grayplot(z[,1], z[,2], bg=color,
-         xlab="Proportion contaminant", ylab=expression(paste("LRT statistic (/", 10^6, ")")),
-         xlim=c(0, 1), xaxs="i", yaxs="i",
+         xlab="Percent contaminant", ylab=expression(paste("LRT statistic (/", 10^6, ")")),
+         xlim=c(0, 100), xaxs="i", yaxs="i",
          yat = seq(0, max(z[,2]), by=2), ylim=c(-2500/1e6, max(z[,2])*1.05),
          mgp.x=c(1.4,0.3,0), mgp.y=c(1.3,0.3,0))
 

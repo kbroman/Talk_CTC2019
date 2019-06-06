@@ -8,8 +8,8 @@ mix <- readRDS("../Data/mixture_results.rds")
 
 plot_mix <-
     function(ind, dat=mix, color="lightblue",
-             xlab="Proportion contaminant", ylab=NULL, yat=NULL,
-             xd=0.02, xlim=c(0, 1), ylim=NULL, textright=TRUE, ...)
+             xlab="Percent contaminant", ylab=NULL, yat=NULL,
+             xd=2, xlim=c(0, 100), ylim=NULL, textright=TRUE, ...)
 {
     z <- sapply(dat, function(a) max(a[,"lrt_p0"], na.rm=TRUE))/1e6
     if(is.null(ylim)) ylim <- c(0, max(z)*1.05)
@@ -19,6 +19,7 @@ plot_mix <-
     dat <- dat[[ind]]
     dat <- dat[rownames(dat) != ind,]
     dat[,"lrt_p0"] <- dat[,"lrt_p0"]/1e6
+    dat[,"p"] <- dat[,"p"]*100
 
     grayplot(dat[,"p"], dat[,"lrt_p0"], main=ind,
              xlim=xlim, ylim=ylim, xaxs="i", yaxs="i",

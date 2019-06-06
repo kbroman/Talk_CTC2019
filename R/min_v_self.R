@@ -3,7 +3,7 @@
 library(lineup2)
 library(broman)
 
-samp_p <- readRDS("../Data/dist_matrix.rds")
+samp_p <- readRDS("../Data/dist_matrix.rds")*100
 
 # plot of best vs self-self distances
 pdf("../Figs/min_v_self.pdf", width=10, height=5.5, pointsize=18)
@@ -34,9 +34,9 @@ lowreads <- paste0("DO-", c(174, 385))
 color[lowreads] <- the_colors[2]
 
 grayplot(self, best, bg=color,
-         xlab="Proportion discordant with self", ylab="Minimum proportion discordant",
-         yat=c(0, 0.05, 0.10, 0.15),
-         ylim=c(0, 0.15), xlim=c(0, 0.23), xaxs="i", yaxs="i",
+         xlab="Percent discordant with self", ylab="Minimum percent discordant",
+         yat=c(0, 5, 10, 15),
+         ylim=c(0, 15), xlim=c(0, 23), xaxs="i", yaxs="i",
          mgp.x=c(1.4,0.3,0), mgp.y=c(2.5,0.3,0), cex=0.7)
 
 points(self[mixture], best[mixture], bg=color[mixture], pch=21, cex=0.7)
