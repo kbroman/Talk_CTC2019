@@ -13,7 +13,7 @@ par(mfcol=c(2, 3), mar=c(2.6, 3.8, 2.1, 0.6))
 for(samp in samples) {
     grayplot(d[samp,], xlab="genomic DNA sample",
              main=paste("microbiome sample", samp),
-             ylab="percent discordance",
+             ylab="percent mismatch",
              ylim=c(0, 29), yaxs="i",
              mgp.x=c(1.3, 0.3, 0),
              mgp.y=c(2.5, 0.3, 0))

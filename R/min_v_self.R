@@ -34,7 +34,7 @@ lowreads <- paste0("DO-", c(174, 385))
 color[lowreads] <- the_colors[2]
 
 grayplot(self, best, bg=color,
-         xlab="Percent discordance with self", ylab="Minimum percent discordance",
+         xlab="Percent mismatch with self", ylab="Minimum percent mismatch",
          yat=c(0, 5, 10, 15),
          ylim=c(0, 15), xlim=c(0, 23), xaxs="i", yaxs="i",
          mgp.x=c(1.4,0.3,0), mgp.y=c(2.5,0.3,0), cex=0.7)
