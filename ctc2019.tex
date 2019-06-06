@@ -63,7 +63,7 @@
   The goal of the microbiome sequencing was to characterize the
   bacteria in the gut of the mice, but the data also include reads
   derived from the mouse host. This offers an opportunity to
-  check for sample duplicates between the microbiome samples and the
+  check for sample mix-ups between the microbiome samples and the
   genomic DNA samples.
 
   We want to relate the genotypes at SNPs across the genome to the
@@ -123,7 +123,7 @@ allows for the presence of genotyping errors.
 
 The white, gray, and black circles indicate SNP genotypes AA, AB, and
 BB, with A being the major allele and B being the minor allele (based
-on frequency in the eight founder strains.)
+on frequency in the eight founder strains).
 
 The eight founder strains have been sequenced, and so we know their
 genotype at about 40 million polymorphisms in the genome. We can use
@@ -153,7 +153,7 @@ direct DO genotype data.
 \note{
 The second part of the process is to map sequence reads to the mouse
 genome. We then look at the SNPs in a region, identify which reads
-overlap a SNP, and the count the observed alleles at the different reads.
+overlap a SNP, and count the observed alleles at the different SNPs.
 
 If a DO mouse really corresponds to that microbiome sample, all reads
 should be A whereever the mouse has genotype AA, and B where the mouse
@@ -324,9 +324,9 @@ at a SNP where the mouse is AA.
 \note{
   Here, we plot the minimum distance for each microbiome sample (the
   minimum value in each row in the distance matrix) vs.\ the self-self
-  distance.
+  distance (the diagonal in the distance matrix).
 
-  Samples on the diagonal (in light blue) look to be
+  Samples on the diagonal here (in light blue) look to be
   correctly labeled: they are similar to the corresponding genomic DNA
   sample and no other sample is closer.
 
@@ -359,6 +359,10 @@ at a SNP where the mouse is AA.
 
    The left panels are a clear mix-up between DO-53 and DO-54.
    The center panels are a clear mix-up between DO-360 and DO-370.
+   We can't tell whether the mix-ups are in the microbiome samples or
+   the genomic DNA samples, though for DO-360 and DO-370, we have
+   RNA-seq data, and the sample swap is seen there, too. Thus, we can
+   conclude for DO-360 and DO-370, the mix-up was in the genomic DNAs.
 
    The upper-right panel shows that DO-361 is well behaved.
 
@@ -460,7 +464,7 @@ at a SNP where the mouse is AA.
     B reads in each group.
 
     It should be that the frequency of A vs. B reads in the microbiome
-    sample DO-362 should only depend on the genotype of DO-362 and not
+    sample DO-362 only depends on the genotype of DO-362 and not
     on the genotype of DO-361. But as shown on this slide, there is a
     very strong dependence on the genotype of DO-361.
 
@@ -665,9 +669,9 @@ It is always important to provide a summary.
 
 \note{
   Lindsay had the idea to look for these mix-ups. (She was a postdoc
-  with Federico Rey in Microbiology at UW-Madison.) Alexandra did most
+  with Federico Rey in Microbiology at UW--Madison.) Alexandra did most
   of the work. (She was a summer student with me and now is a graduate
-  student in the Biomedical Data Science PhD program at UW-Madison.
+  student in the Biomedical Data Science PhD program at UW--Madison.)
 
   This is part of a larger project looking at the genetics of
   diabetes, obesity, and related traits.
