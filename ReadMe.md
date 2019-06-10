@@ -1,6 +1,6 @@
 ## Talk on &ldquo;Sample mix-ups and mixtures in microbiome data in DO mice&rdquo;
 
-These are slides for a talk that I will give at the [Complex Trait
+These are slides for a talk that I gave at the [Complex Trait
 Community meeting](http://ratgenes.org/ctc2019) in San Diego on 10 June 2019.
 
 The compiled slides:
